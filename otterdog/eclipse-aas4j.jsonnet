@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-aas4j') {
+orgs.newOrg('dt.aas4j', 'eclipse-aas4j') {
   settings+: {
     description: "",
     name: "Eclipse AAS Model for Java",
