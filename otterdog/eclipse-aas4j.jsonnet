@@ -10,6 +10,23 @@ orgs.newOrg('dt.aas4j', 'eclipse-aas4j') {
       default_workflow_permissions: "write",
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+      value: 'pass:bots/dt.aas4j/gpg/key_id',
+    },
+    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
+      value: 'pass:bots/dt.aas4j/gpg/passphrase',
+    },
+    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
+      value: 'pass:bots/dt.aas4j/gpg/secret-subkeys.asc',
+    },
+    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
+      value: 'pass:bots/dt.aas4j/central.sonatype.org/password',
+    },
+    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
+      value: 'pass:bots/dt.aas4j/central.sonatype.org/username',
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('aas4j') {
       allow_merge_commit: true,
