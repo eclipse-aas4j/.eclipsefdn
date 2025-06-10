@@ -11,20 +11,20 @@ orgs.newOrg('dt.aas4j', 'eclipse-aas4j') {
     },
   },
   secrets+: [
-    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+    orgs.newOrgSecret('GPG_KEY_ID') {
       value: 'pass:bots/dt.aas4j/gpg/key_id',
     },
-    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
       value: 'pass:bots/dt.aas4j/gpg/passphrase',
     },
-    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
       value: 'pass:bots/dt.aas4j/gpg/secret-subkeys.asc',
     },
-    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
-      value: 'pass:bots/dt.aas4j/central.sonatype.org/password',
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: 'pass:bots/dt.aas4j/central.sonatype.org/token-password',
     },
-    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
-      value: 'pass:bots/dt.aas4j/central.sonatype.org/username',
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: 'pass:bots/dt.aas4j/central.sonatype.org/token-username',
     },
   ],
   _repositories+:: [
